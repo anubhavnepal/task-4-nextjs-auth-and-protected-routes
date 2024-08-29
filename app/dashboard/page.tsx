@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import Button from "../components/ui/Button";
 
-const dashboard = () => {
+const Dashboard = () => {
   const router = useRouter();
 
   useEffect(() => {
@@ -29,4 +29,4 @@ const dashboard = () => {
   );
 };
 
-export default dashboard;
+export default Dashboard;
