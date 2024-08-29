@@ -13,7 +13,7 @@ const Form = () => {
   const loginHandler = async (event: React.FormEvent<HTMLElement>) => {
     event.preventDefault();
 
-    if (username === "user" && password === "user") {
+    if (username === "aban" && password === "aban") {
       document.cookie = "auth=true; path=/";
       router.push("/dashboard");
     } else {
@@ -28,7 +28,7 @@ const Form = () => {
           id="unique_id"
           type="text"
           name="unique_id"
-          placeholder="user"
+          placeholder="aban"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />

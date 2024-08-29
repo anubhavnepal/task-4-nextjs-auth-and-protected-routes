@@ -12,12 +12,12 @@ describe('Form Component', () => {
     (useRouter as jest.Mock).mockReturnValue({ push });
 
     const { getByPlaceholderText, getByText } = render(<Form />);
-    const usernameInput = getByPlaceholderText('user');
+    const usernameInput = getByPlaceholderText('aban');
     const passwordInput = getByPlaceholderText('Same as username');
     const loginButton = getByText('LOGIN');
 
-    fireEvent.change(usernameInput, { target: { value: 'user' } });
-    fireEvent.change(passwordInput, { target: { value: 'user' } });
+    fireEvent.change(usernameInput, { target: { value: 'aban' } });
+    fireEvent.change(passwordInput, { target: { value: 'aban' } });
     fireEvent.click(loginButton);
 
     expect(push).toHaveBeenCalledWith('/dashboard');
@@ -26,7 +26,7 @@ describe('Form Component', () => {
   test('shows alert on invalid credentials', () => {
     global.alert = jest.fn();
     const { getByPlaceholderText, getByText } = render(<Form />);
-    const usernameInput = getByPlaceholderText('user');
+    const usernameInput = getByPlaceholderText('aban');
     const passwordInput = getByPlaceholderText('Same as username');
     const loginButton = getByText('LOGIN');
 
