@@ -14,4 +14,5 @@ declare interface LabelParams{
 declare interface ButtonParams{
     title: string,
     type?: "button" | "submit" | "reset" | undefined,
+    onClick?:React.MouseEventHandler<HTMLButtonElement>
 }
